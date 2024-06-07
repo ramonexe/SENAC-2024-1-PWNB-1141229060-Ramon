@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/flowfood/projeto/imagens/flow-food-favicon.ico"
+    />
+    <link rel="stylesheet" href="/flowfood/projeto/styles/reserva.css" />
+    <title>Flow Food - Reservas</title>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img
+          src="/flowfood/projeto/imagens/flow-food-logo100.png"
+          alt="Logo FlowFood"
+        />
+        <button class="menu-toggle">Menu</button>
+        <nav class="mobile-menu">
+          <button class="close-menu">Fechar</button>
+          <ul>
+            <li>
+              <a href="index.html"> <button class="nav-button">
+                  <strong>Início</strong>
+                </button></a>
+            </li>
+            <li>
+              <a href="pedido.html"> <button class="nav-button">
+                  <strong>Pedidos</strong>
+                </button></a>
+            </li>
+            <li>
+              <a href="reserva.html"> <button class="nav-button">
+                  <strong>Reservas</strong>
+                </button></a>
+            </li>
+            <li>
+              <a href="index.html"> <button class="nav-button" data-target="stock">
+                <strong>Estoque</strong>
+              </button></a>
+            </li>
+            <li>
+              <a href="relatorio.html"> <button class="nav-button">
+                  <strong>Relatórios</strong>
+                </button></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html"> <button class="nav-button">
+              <strong>Início</strong>
+            </button></a>
+        </li>
+        <li>
+          <a href="pedido.html"> <button class="nav-button">
+              <strong>Pedidos</strong>
+            </button></a>
+        </li>
+        <li>
+          <a href="reserva.html"><button class="nav-button active">
+            <strong>Reservas</strong>
+          </button></a>
+        </li>
+        <li>
+          <a href="index.html"> <button class="nav-button" data-target="stock">
+            <strong>Estoque</strong>
+          </button></a>
+        </li>
+        <li>
+          <a href="relatorio.html"> <button class="nav-button">
+              <strong>Relatórios</strong>
+            </button></a>
+        </li>
+    </nav>
+
+    <main class="main-content">
+      <section id="reserva-content" class="reserva-section visible">
+        <div class="flexbox-reserva">
+          <div class="nova-reserva">
+            <h1 class="texto-box">Nova Reserva</h1>
+            <div class="in-nova-reserva">
+              <form  id="reserva-form">
+                <label for="input-cliente" class="label-reserva-input"
+                  >Cliente:</label
+                >
+                <input
+                  name="cliente"
+                  type="text"
+                  class="label-reserva-input"
+                  id="input-cliente"
+                  required
+                /><br />
+                <label for="input-mesa" class="label-reserva-input"
+                  >Mesa:</label
+                >
+                <input
+                  name="mesa"
+                  type="number"
+                  class="label-reserva-input"
+                  id="input-mesa"
+                  required
+                /><br />
+                <label for="input-qtd" class="label-reserva-input"
+                  >Qtd pessoas:</label
+                >
+                <input
+                  name="quantidade"
+                  type="number"
+                  class="label-reserva-input"
+                  id="input-qtd"
+                  required
+                /><br />
+                <label for="input-horario" class="label-reserva-input"
+                  >Horário:</label
+                >
+                <input
+                  name="data"
+                  type="datetime-local"
+                  class="label-reserva-input"
+                  id="input-horario"
+                  required
+                /><br />
+                <button id="botao-adicionar" type="submit">Reservar</button>
+              </form>
+            </div>
+          </div>
+          <div class="reserva-confirmada">
+            <h1 class="titulo-box">Reservas Confirmadas</h1>
+            <div class="reservas-container">
+
+            </div>
+          </div>
+          <div class="reserva-agendada">
+            <h1 class="titulo-box">Reservas Agendadas</h1>
+            <div class="reservas-container"></div>
+          </div>
+          <div class="reserva-concluida">
+            <h1 class="titulo-box">Reservas Concluídas</h1>
+            <div class="reservas-container"></div>
+          </div>
+          <div class="reserva-cancelada">
+            <h1 class="titulo-box">Reservas Canceladas</h1>
+            <div class="reservas-container"></div>
+          </div>
+          <div class="total-reservas">
+            <h1 class="titulo-box">Total de reservas:</h1>
+            <div class="reservas-container">
+            <h1 class="texto-box">Agendadas:</h1>
+            <p id="quantia-reservas-agendadas"></p>
+            <h1 class="texto-box">Confirmadas:</h1>
+            <p id="quantia-reservas-confirmadas"></p>
+            <h1 class="texto-box">Concluídas:</h1>
+            <p id="quantia-reservas-concluidas"></p>
+            <h1 class="texto-box">Canceladas:</h1>
+            <p id="quantia-reservas-canceladas"></p>
+            <h1 class="titulo-box">Total:</h1>
+            <p id="quantia-reservas-total"></p>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content-left">
+        <h1>Flow Food</h1>
+        <p>Gestão de restaurantes</p>
+      </div>
+      <div class="footer-content-center">
+        <img
+          src="/flowfood/projeto/imagens/flow-food-logo100.png"
+          alt="FlowFood Logo Pequeno"
+          class="footer-logo"
+        />
+      </div>
+      <div class="footer-content-right">
+        <p>Todos os direitos reservados ©</p>
+      </div>
+    </footer>
+
+    <!-- Link para o JavaScript -->
+    <script src="/flowfood/projeto/js/scripts.js"></script>
+    <script src="/flowfood/projeto/js/reserva.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  </body>
+</html>

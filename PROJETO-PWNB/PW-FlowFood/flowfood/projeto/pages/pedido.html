@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/flowfood/projeto/imagens/flow-food-favicon.ico" />
+  <link rel="stylesheet" href="/flowfood/projeto/styles/pedidos.css" />
+  <title>Flow Food - Relatórios</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="/flowfood/projeto/imagens/flow-food-logo100.png" alt="Logo FlowFood" />
+      <button class="menu-toggle">Menu</button>
+      <nav class="mobile-menu">
+        <button class="close-menu">Fechar</button>
+        <ul>
+          <li>
+            <a href="index.html"> <button class="nav-button">
+                <strong>Início</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="pedido.html"> <button class="nav-button">
+                <strong>Pedidos</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="reserva.html"> <button class="nav-button">
+                <strong>Reservas</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="index.html"> <button class="nav-button" data-target="stock">
+              <strong>Estoque</strong>
+            </button></a>
+          </li>
+          <li>
+            <a href="relatorio.html"> <button class="nav-button">
+                <strong>Relatórios</strong>
+              </button></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="index.html"> <button class="nav-button">
+            <strong>Início</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="pedido.html"> <button class="nav-button active">
+            <strong>Pedidos</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="reserva.html"> <button class="nav-button">
+            <strong>Reservas</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="index.html"> <button class="nav-button" data-target="stock">
+          <strong>Estoque</strong>
+        </button></a>
+      </li>
+      <li>
+        <a href="relatorio.html"> <button class="nav-button">
+            <strong>Relatórios</strong>
+          </button></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="pedido-content" class="pedido-section visible">
+      <div class="flexbox-content">
+        <div class="pedidos-atual">
+          <h1 class="texto-box">Pedidos</h1>
+          <div class="in-novo-pedido">
+            <form action="post" id="pedido-form">
+              <label for="input-mesa" class="label-pedido-input">Mesa:</label>
+              <input name="mesa" type="number" class="label-pedido-input" id="input-mesa"></input>
+              <label for="input-reserva" class="label-pedido-input">Pedido:</label>
+              <input name="pedido" type="text" class="label-pedido-input" id="input-pedido"></input>
+              <label for="=input-valor" class="label-pedido-input">Valor:</label>
+              <input name="valor" type="number" class="label-pedido-input" id="input-valor"></input>
+              <button id="botao-adicionar" type="button" class="botao-adicionar">Adicionar</button>
+            </form>
+          </div>
+          <div class="lista-pedidos"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content-left">
+      <h1>Flow Food</h1>
+      <p>Gestão de restaurantes</p>
+    </div>
+    <div class="footer-content-center">
+      <img src="/flowfood/projeto/imagens/flow-food-logo100.png" alt="FlowFood Logo Pequeno" class="footer-logo" />
+    </div>
+    <div class="footer-content-right">
+      <p>Todos os direitos reservados ©</p>
+    </div>
+  </footer>
+
+  <script src="/flowfood/projeto/js/pedido.js"></script>
+  <script src="/flowfood/projeto/js/scripts.js"></script>
+  <!-- Link para o JavaScript -->
+</body>
+
+</html>

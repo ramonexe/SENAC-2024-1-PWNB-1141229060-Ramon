@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/flowfood/projeto/imagens/flow-food-favicon.ico" />
+  <link rel="stylesheet" href="/flowfood/projeto/styles/relatorio.css" />
+  <title>Flow Food - Relatórios</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="/flowfood/projeto/imagens/flow-food-logo100.png" alt="Logo FlowFood" />
+      <button class="menu-toggle">Menu</button>
+      <nav class="mobile-menu">
+        <button class="close-menu">Fechar</button>
+        <ul>
+          <li>
+            <a href="index.html"> <button class="nav-button">
+                <strong>Início</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="pedido.html"> <button class="nav-button">
+                <strong>Pedidos</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="reserva.html"> <button class="nav-button">
+                <strong>Reservas</strong>
+              </button></a>
+          </li>
+          <li>
+            <a href="index.html"> <button class="nav-button" data-target="stock">
+              <strong>Estoque</strong>
+            </button></a>
+          </li>
+          <li>
+            <a href="relatorio.html"> <button class="nav-button">
+                <strong>Relatórios</strong>
+              </button></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="index.html"> <button class="nav-button">
+            <strong>Início</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="pedido.html"> <button class="nav-button">
+            <strong>Pedidos</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="reserva.html"> <button class="nav-button">
+            <strong>Reservas</strong>
+          </button></a>
+      </li>
+      <li>
+        <a href="index.html"> <button class="nav-button" data-target="stock">
+          <strong>Estoque</strong>
+        </button></a>
+      </li>
+      <li>
+        <a href="relatorio.html"> <button class="nav-button active">
+            <strong>Relatórios</strong>
+          </button></a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="relatorio-content" class="relatorio-section visible">
+      <div class="flexbox-content">
+        <div class="relatorios-atual">
+          <h1 class="texto-box">RELATÓRIOS E FINANÇAS</h1>
+          <div class="grafico-container">
+            <canvas id="graficoVendas"></canvas>
+          </div>
+          <div class="resumo-financeiro">
+            <h2 class="texto-box">Resumo Financeiro</h2>
+            <p>Total de Vendas: R$ <span id="total-vendas">0.00</span></p>
+            <p>Pedidos em Aberto: <span id="pedidos-aberto">0</span></p>
+            <p>Pedidos Concluídos: <span id="pedidos-concluidos">0</span></p>
+          </div>
+          <div class="tabela-pedidos">
+            <h2 class="texto-box">Pedidos Recentes</h2>
+            <table id="tabela-pedidos">
+              <thead>
+                <tr>
+                  <th>Mesa</th>
+                  <th>Pedido</th>
+                  <th>Valor</th>
+                  <th>Data</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Linhas serão adicionadas dinamicamente -->
+              </tbody>
+            </table>
+          </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="transactions-section" class="transaction-section">
+      <div class="tabela-transactions">
+      <h1 class="texto-box">Registro de Transações Financeiras</h1>
+      <form id="transaction-form">
+        <label for="transaction-type">Tipo de Transação:</label>
+        <select id="transaction-type" name="transaction-type">
+          <option value="receita">Receita</option>
+          <option value="despesa">Despesa</option>
+        </select>
+        <label for="transaction-description">Descrição:</label>
+        <input type="text" id="transaction-description" name="transaction-description">
+        <label for="transaction-value">Valor (R$):</label>
+        <input type="number" id="transaction-value" name="transaction-value" step="0.01">
+        <label for="transaction-date">Data:</label>
+        <input type="date" id="transaction-date" name="transaction-date">
+        <button type="submit">Registrar Transação</button>
+        <p>Total de Receitas: R$ <span id="total-receita">0.00</span></p>
+        <p>Total de Despesas: R$ <span id="total-despesa">0.00</span></p>
+        <button id="clear-transactions-button" class="limpar-transactions">Limpar Transações</button>
+        <div id="transactions-list" class="transactions-list">
+          <!-- Transações serão carregadas dinamicamente -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content-left">
+      <h1>Flow Food</h1>
+      <p>Gestão de restaurantes</p>
+    </div>
+    <div class="footer-content-center">
+      <img src="/flowfood/projeto/imagens/flow-food-logo100.png" alt="FlowFood Logo Pequeno" class="footer-logo" />
+    </div>
+    <div class="footer-content-right">
+      <p>Todos os direitos reservados ©</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/flowfood/projeto/js/relatorio.js"></script>
+  <script src="/flowfood/projeto/js/scripts.js"></script>
+  <!-- Link para o JavaScript -->
+</body>
+
+</html>

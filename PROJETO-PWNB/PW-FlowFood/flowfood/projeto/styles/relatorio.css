@@ -1,0 +1,455 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  background-image: url(/flowfood/projeto/imagens/background-pattern.jpg);
+  background-size: cover;
+}
+
+.main-header {
+  padding: 5px;
+}
+
+.logo img {
+  margin-left: 55px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 20px 0px;
+  background-color: #1e1e1e;
+  color: #fff;
+  z-index: 1000;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile-menu.visible {
+  display: block;
+}
+
+.menu-toggle {
+  font-weight: bold;
+  display: none;
+  background-color: #e5940e;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  background-color: #bb7a10;
+}
+
+.close-menu {
+  font-weight: bold;
+  background-color: #e5940e;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 92px;
+  left: 0;
+  width: 179px;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #bb7a10;
+  color: white;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #e5940e;
+}
+
+.nav-button.active {
+  background-color: #e5940e;
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+/* Main Content */
+.main-content {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: 10px;
+  margin-left: 190px;
+  padding: 10px;
+  background-color: #e5940e;
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 0 20px #000000
+}
+
+/* Flexbox Teste */
+.flexbox-content {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: 10px;
+  padding: 0px;
+  background-color: #e5940e;
+}
+
+.relatorios-atual {
+  flex: 50%;
+  margin: 10px;
+  overflow: auto;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #c8c8c8;
+}
+
+.texto-box {
+  margin: 10px;
+  color: #000000;
+}
+
+.grafico-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.resumo-financeiro {
+  margin: 20px;
+  padding: 10px;
+  background-color: #a8a8a8;
+  border-radius: 10px;
+}
+
+.resumo-financeiro p {
+  color: #000;
+  font-size: 18px;
+}
+
+.tabela-pedidos {
+  margin: 20px;
+  padding: 10px;
+  background-color: #a8a8a8;
+  border-radius: 10px;
+}
+
+.tabela-pedidos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-pedidos th,
+.tabela-pedidos td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+  color: #000;
+}
+
+.tabela-pedidos th {
+  background-color: #3d3c3c;
+  color: white;
+}
+
+.titulo-box {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+  color: #000000;
+}
+
+.transaction-section {
+  flex: 50%;
+  margin: 10px;
+  overflow: auto;
+  padding: 10px;
+  height: auto;
+  border-radius: 10px;
+  background: #c8c8c8;
+}
+
+.transactions-list {
+  max-height: 600px; /* Altura máxima para scroll se necessário */
+  overflow-y: auto; /* Adiciona scroll vertical se necessário */
+}
+
+.transaction {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  color: #333;
+}
+
+.transaction-type {
+  font-weight: bold;
+  color: #333;
+}
+
+.transaction-description {
+  margin-top: 5px;
+  color: #333;
+}
+
+.transaction-value {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.transaction-date {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.toggle-status-button {
+  background-color: #3d3c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-status-button:hover {
+  background-color: #e5940e;
+}
+
+.status-pago {
+  background-color: #59FA84; /* Verde para transações pagas */
+}
+
+.status-pendente {
+  background-color: #F8D015; /* Amarelo para transações pendentes */
+}
+
+.tabela-transactions {
+  margin: 20px;
+  padding: 10px;
+  background-color: #a8a8a8;
+  border-radius: 10px;
+}
+
+.limpar-transactions {
+  background-color: #e5940e;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 10px;
+  margin-left: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.limpar-transactions:hover {
+  background-color: #a76b0b;
+}
+
+.receita {
+  color: green; /* Define a cor verde para transações de receita */
+}
+
+.receita .toggle-status-button {
+  display: none; /* Esconde o botão de alterar status para transações de receita */
+}
+
+.main-footer {
+  justify-content: space-between;
+  margin-top: 40px;
+  height: 100%;
+  background-color: #0f0f0f;
+  flex-direction: row;
+  display: flex;
+  padding: 20px;
+  opacity: 80%;
+}
+
+.footer-content-left {
+  margin-right: 10px;
+  padding-right: 250px;
+  display: block;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: block;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-content-right {
+  margin-left: 10px;
+  padding-left: 250px;
+  display: block;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.icon-food {
+  width: 50px;
+  height: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 0 6px 6px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  padding: 10px;
+  background-color: #bb7a10;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+  border-radius: 6px;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 150px;
+  }
+
+  .logo img {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .nav-button {
+    border-radius: 20px;
+  }
+
+  .flexbox-teste {
+    flex-direction: column;
+  }
+
+  .receita-atual,
+  .estoque-atual,
+  .pedidos-atual,
+  .reservas-atual,
+  .in-pedidos,
+  .in-reservas,
+  .estoque {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .quantia-receita-atual {
+    font-size: 45px;
+  }
+
+  .titulo-box {
+    font-size: 24px;
+  }
+
+  .table-estoque th,
+  .table-estoque td {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .logo img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1324px) {
+  .sidebar {
+    width: 15%;
+  }
+}
